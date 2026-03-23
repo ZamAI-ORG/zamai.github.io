@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZamAI — Home of Zeerak</title>
+  <meta
+    name="description"
+    content="ZamAI is the home of Zeerak, the flagship AI assistant by ZamAI, along with future AI products, tools, and digital experiences."
+  />
+  <meta name="theme-color" content="#020617" />
+  <meta property="og:title" content="ZamAI — Home of Zeerak" />
+  <meta
+    property="og:description"
+    content="ZamAI is the parent organization behind Zeerak, a flagship AI assistant for intelligent workflows and modern digital experiences."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://zamai.dev" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Inter", "sans-serif"]
+          },
+          colors: {
+            zamai: {
+              bg: "#020617",
+              bgSoft: "#07101f",
+              panel: "#0b1220",
+              panelAlt: "#0f172a",
+              line: "#1e293b",
+              text: "#f8fafc",
+              muted: "#94a3b8",
+              blue: "#3b82f6",
+              cyan: "#22d3ee",
+              violet: "#8b5cf6"
+            }
+          },
+          boxShadow: {
+            glow: "0 0 0 1px rgba(59,130,246,0.18), 0 12px 50px rgba(34,211,238,0.12)",
+            button: "0 10px 30px rgba(59,130,246,0.25)"
+          },
+          backgroundImage: {
+            "brand-gradient": "linear-gradient(135deg, #3b82f6 0%, #22d3ee 45%, #8b5cf6 100%)"
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    :root { color-scheme: dark; }
+
+    body {
+      background:
+        radial-gradient(circle at top left, rgba(59, 130, 246, 0.12), transparent 26%),
+        radial-gradient(circle at top right, rgba(139, 92, 246, 0.10), transparent 22%),
+        radial-gradient(circle at 50% 20%, rgba(34, 211, 238, 0.08), transparent 25%),
+        #020617;
+      color: #f8fafc;
+    }
+
+    .grid-overlay {
+      background-image:
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 34px 34px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.95), rgba(0,0,0,0.18));
+      -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.95), rgba(0,0,0,0.18));
+    }
+
+    .glass {
+      background: rgba(11, 18, 32, 0.72);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #ffffff 0%, #93c5fd 30%, #67e8f9 65%, #c4b5fd 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .border-glow {
+      position: relative;
+      isolation: isolate;
+    }
+
+    .border-glow::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 1.5rem;
+      padding: 1px;
+      background: linear-gradient(135deg, rgba(59,130,246,0.45), rgba(34,211,238,0.22), rgba(139,92,246,0.35));
+      -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .section-reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .section-reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .mobile-open {
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body class="font-sans antialiased selection:bg-cyan-400/20 selection:text-white">
+  <div class="relative overflow-hidden">
+    <div class="grid-overlay absolute inset-0 opacity-50"></div>
+    <div class="absolute inset-x-0 top-0 h-[42rem] bg-gradient-to-b from-blue-500/10 via-cyan-400/5 to-transparent"></div>
+
+    <header id="site-header" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
+      <nav class="mx-auto mt-3 max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="glass flex items-center justify-between rounded-2xl border border-slate-800 px-4 py-3 shadow-lg">
+          <a href="#home" class="group flex items-center gap-3">
+            <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-brand-gradient text-base font-black text-slate-950 shadow-button transition duration-300 group-hover:scale-105">
+              Z
+            </div>
+            <div>
+              <div class="text-lg font-bold tracking-tight text-white">ZamAI</div>
+              <div class="text-xs text-slate-400">Home of Zeerak</div>
+            </div>
+          </a>
+
+          <div class="hidden items-center gap-8 md:flex">
+            <a href="#zeerak" class="text-sm text-slate-300 transition hover:text-white">Zeerak</a>
+            <a href="#about" class="text-sm text-slate-300 transition hover:text-white">About</a>
+            <a href="#ecosystem" class="text-sm text-slate-300 transition hover:text-white">Ecosystem</a>
+            <a href="#projects" class="text-sm text-slate-300 transition hover:text-white">Projects</a>
+            <a href="#faq" class="text-sm text-slate-300 transition hover:text-white">FAQ</a>
+          </div>
+
+          <div class="hidden items-center gap-3 md:flex">
+            <a
+              href="https://github.com/ZamAI"
+              target="_blank"
+              rel="noreferrer"
+              class="rounded-full border border-slate-700 bg-slate-900/70 px-4 py-2 text-sm text-slate-300 transition hover:border-slate-500 hover:text-white"
+            >
+              GitHub
+            </a>
+            <a
+              href="#contact"
+              class="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-slate-950 transition hover:bg-slate-200"
+            >
+              Discover Zeerak
+            </a>
+          </div>
+
+          <button
+            id="mobile-menu-button"
+            type="button"
+            class="inline-flex items-center justify-center rounded-xl border border-slate-700 bg-slate-900/70 p-2 text-slate-200 md:hidden"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            aria-label="Open navigation menu"
+          >
+            <svg id="menu-open-icon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="4" y1="6" x2="20" y2="6"></line>
+              <line x1="4" y1="12" x2="20" y2="12"></line>
+              <line x1="4" y1="18" x2="20" y2="18"></line>
+            </svg>
+            <svg id="menu-close-icon" xmlns="http://www.w3.org/2000/svg" class="hidden h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+              <line x1="6" y1="18" x2="18" y2="6"></line>
+            </svg>
+          </button>
+        </div>
+
+        <div id="mobile-menu" class="glass mt-3 hidden rounded-2xl border border-slate-800 p-4 md:hidden">
+          <div class="flex flex-col gap-3">
+            <a href="#zeerak" class="rounded-xl px-3 py-2 text-sm text-slate-300 transition hover:bg-slate-800 hover:text-white">Zeerak</a>
+            <a href="#about" class="rounded-xl px-3 py-2 text-sm text-slate-300 transition hover:bg-slate-800 hover:text-white">About</a>
+            <a href="#ecosystem" class="rounded-xl px-3 py-2 text-sm text-slate-300 transition hover:bg-slate-800 hover:text-white">Ecosystem</a>
+            <a href="#projects" class="rounded-xl px-3 py-2 text-sm text-slate-300 transition hover:bg-slate-800 hover:text-white">Projects</a>
+            <a href="#faq" class="rounded-xl px-3 py-2 text-sm text-slate-300 transition hover:bg-slate-800 hover:text-white">FAQ</a>
+            <div class="mt-2 grid gap-3">
+              <a
+                href="https://github.com/ZamAI"
+                target="_blank"
+                rel="noreferrer"
+                class="rounded-xl border border-slate-700 px-4 py-3 text-center text-sm text-slate-300 transition hover:border-slate-500 hover:text-white"
+              >
+                GitHub
+              </a>
+              <a
+                href="#contact"
+                class="rounded-xl bg-white px-4 py-3 text-center text-sm font-semibold text-slate-950 transition hover:bg-slate-200"
+              >
+                Discover Zeerak
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="home" class="relative z-20 pt-28">
+      <section class="mx-auto max-w-7xl px-6 pb-24 pt-10 lg:px-8 lg:pb-32 lg:pt-20">
+        <div class="grid items-center gap-16 lg:grid-cols-[1.15fr_0.85fr]">
+          <div class="section-reveal">
+            <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-2 text-sm text-cyan-200">
+              <span class="inline-block h-2.5 w-2.5 rounded-full bg-cyan-300 animate-pulse"></span>
+              Zeerak is the flagship AI assistant by ZamAI
+            </div>
+
+            <h1 class="max-w-4xl text-5xl font-black leading-[1.02] tracking-tight text-white md:text-6xl xl:text-7xl">
+              One AI brand.
+              <span class="gradient-text">One ecosystem.</span>
+              One flagship assistant:
+              <span class="gradient-text">Zeerak.</span>
+            </h1>
+
+            <p class="mt-7 max-w-2xl text-lg leading-8 text-slate-300 md:text-xl">
+              ZamAI is the parent organization behind a growing ecosystem of AI products, tools, and digital experiences. Zeerak leads that vision as the flagship assistant product.
+            </p>
+
+            <div class="mt-9 flex flex-col gap-4 sm:flex-row">
+              <a
+                href="#zeerak"
+                class="inline-flex items-center justify-center rounded-full bg-brand-gradient px-7 py-3.5 text-sm font-semibold text-slate-950 shadow-button transition duration-300 hover:scale-[1.02]"
+              >
+                Meet Zeerak
+              </a>
+              <a
+                href="#projects"
+                class="inline-flex items-center justify-center rounded-full border border-slate-700 bg-slate-900/70 px-7 py-3.5 text-sm font-semibold text-white transition hover:border-slate-500 hover:bg-slate-800"
+              >
+                Explore ZamAI
+              </a>
+            </div>
+
+            <div class="mt-10 grid max-w-2xl gap-4 sm:grid-cols-3">
+              <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
+                <div class="text-2xl font-bold text-white">Brand</div>
+                <div class="mt-2 text-sm text-slate-400">ZamAI unifies your public ecosystem and identity.</div>
+              </div>
+              <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
+                <div class="text-2xl font-bold text-white">Flagship</div>
+                <div class="mt-2 text-sm text-slate-400">Zeerak is introduced as the main assistant product.</div>
+              </div>
+              <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
+                <div class="text-2xl font-bold text-white">Future</div>
+                <div class="mt-2 text-sm text-slate-400">New tools and products can grow under the same brand.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-reveal relative">
+            <div class="absolute -inset-8 rounded-[2rem] bg-gradient-to-r from-blue-500/20 via-cyan-400/10 to-violet-500/20 blur-3xl"></div>
+
+            <div class="border-glow glass relative rounded-[1.5rem] p-4 shadow-glow">
+              <div class="rounded-[1.3rem] border border-slate-800 bg-[#040b16] p-4">
+                <div class="mb-4 flex items-center justify-between border-b border-slate-800 pb-4">
+                  <div class="flex items-center gap-2">
+                    <span class="h-3 w-3 rounded-full bg-red-500"></span>
+                    <span class="h-3 w-3 rounded-full bg-yellow-400"></span>
+                    <span class="h-3 w-3 rounded-full bg-emerald-400"></span>
+                  </div>
+                  <div class="text-xs text-slate-500">zeerak.preview</div>
+                </div>
+
+                <div class="space-y-4">
+                  <div class="rounded-2xl border border-slate-800 bg-slate-950/90 p-4">
+                    <div class="mb-2 text-xs uppercase tracking-[0.22em] text-cyan-300">ZamAI System</div>
+                    <p class="text-sm leading-7 text-slate-300">
+                      Initializing Zeerak... flagship assistant online... ecosystem routing active...
+                    </p>
+                  </div>
+
+                  <div class="max-w-[90%] rounded-2xl border border-slate-800 bg-slate-900 p-4 text-sm leading-7 text-slate-200">
+                    Zeerak is the flagship AI assistant by ZamAI — built as the first major product in a broader ecosystem of intelligent tools and experiences.
+                  </div>
+
+                  <div class="grid gap-3 sm:grid-cols-2">
+                    <div class="rounded-2xl border border-slate-800 bg-slate-950 p-4">
+                      <div class="text-xs uppercase tracking-[0.2em] text-slate-500">Parent Brand</div>
+                      <div class="mt-2 text-base font-semibold text-white">ZamAI</div>
+                      <div class="mt-1 text-sm text-slate-400">Public ecosystem and organization</div>
+                    </div>
+                    <div class="rounded-2xl border border-slate-800 bg-slate-950 p-4">
+                      <div class="text-xs uppercase tracking-[0.2em] text-slate-500">Flagship Product</div>
+                      <div class="mt-2 text-base font-semibold text-white">Zeerak</div>
+                      <div class="mt-1 text-sm text-slate-400">Primary assistant experience</div>
+                    </div>
+                  </div>
+
+                  <div class="rounded-2xl border border-cyan-400/15 bg-cyan-400/5 p-4">
+                    <div class="text-xs uppercase tracking-[0.2em] text-cyan-300">Positioning</div>
+                    <div class="mt-2 text-lg font-semibold text-white">Zeerak by ZamAI</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="absolute -bottom-6 -left-5 hidden rounded-2xl border border-slate-800 bg-slate-900/90 px-4 py-3 shadow-xl md:block">
+              <div class="text-xs uppercase tracking-[0.2em] text-slate-500">Launch Strategy</div>
+              <div class="mt-1 text-sm font-semibold text-white">Public brand, private core product code</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <section id="zeerak" class="section-reveal border-y border-slate-800 bg-slate-950/60">
+    <div class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+      <div class="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-300">Flagship Product</p>
+          <h2 class="mt-4 text-3xl font-bold tracking-tight text-white md:text-4xl">
+            Zeerak is the public face of the ZamAI vision
+          </h2>
+          <p class="mt-6 text-lg leading-8 text-slate-300">
+            Zeerak is introduced publicly as the main AI assistant by ZamAI. Its implementation can remain private while the product, identity, and future direction are showcased through the ZamAI platform.
+          </p>
+        </div>
+
+        <div class="grid gap-4 sm:grid-cols-2">
+          <article class="rounded-3xl border border-slate-800 bg-slate-900 p-6">
+            <h3 class="text-lg font-semibold text-white">Clear product identity</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-400">Visitors understand what Zeerak is without needing access to private code.</p>
+          </article>
+          <article class="rounded-3xl border border-slate-800 bg-slate-900 p-6">
+            <h3 class="text-lg font-semibold text-white">Brand-backed trust</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-400">ZamAI gives the product a larger story, mission, and ecosystem context.</p>
+          </article>
+          <article class="rounded-3xl border border-slate-800 bg-slate-900 p-6">
+            <h3 class="text-lg font-semibold text-white">Private-by-choice</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-400">The core implementation stays private while public-facing presentation remains polished.</p>
+          </article>
+          <article class="rounded-3xl border border-slate-800 bg-slate-900 p-6">
+            <h3 class="text-lg font-semibold text-white">Future-ready</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-400">You can later add demos, access flows, docs, or a live product entry point.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section-reveal">
+    <div class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+      <div class="max-w-3xl">
+        <p class="text-sm font-semibold uppercase tracking-[0.25em] text-blue-300">About ZamAI</p>
+        <h2 class="mt-4 text-3xl font-bold tracking-tight text-white md:text-4xl">
+          A public home for a growing AI ecosystem
+        </h2>
+        <p class="mt-6 text-lg leading-8 text-slate-300">
+          ZamAI is the public-facing organization behind Zeerak and future AI products, tools, and experiences. It gives everything a shared identity, a shared mission, and a clear place to grow.
+        </p>
+      </div>
+
+      <div class="mt-12 grid gap-6 md:grid-cols-3">
+        <div class="rounded-3xl border border-slate-800 bg-slate-900 p-8">
+          <div class="text-sm font-semibold text-cyan-300">01</div>
+          <h3 class="mt-4 text-xl font-semibold text-white">Website & brand</h3>
+          <p class="mt-3 text-sm leading-7 text-slate-400">A clear public home for the ecosystem and its future.</p>
+        </div>
+        <div class="rounded-3xl border border-slate-800 bg-slate-900 p-8">
+          <div class="text-sm font-semibold text-cyan-300">02</div>
+          <h3 class="mt-4 text-xl font-semibold text-white">Flagship product story</h3>
+          <p class="mt-3 text-sm leading-7 text-slate-400">Zeerak is presented as the lead assistant and core public product identity.</p>
+        </div>
+        <div class="rounded-3xl border border-slate-800 bg-slate-900 p-8">
+          <div class="text-sm font-semibold text-cyan-300">03</div>
+          <h3 class="mt-4 text-xl font-semibold text-white">Room to expand</h3>
+          <p class="mt-3 text-sm leading-7 text-slate-400">New products, tools, and docs can be added without reworking the brand.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ecosystem" class="section-reveal border-y border-slate-800 bg-slate-950/60">
+    <div class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+      <div class="max-w-3xl">
+        <p class="text-sm font-semibold uppercase tracking-[0.25em] text-violet-300">Ecosystem Strategy</p>
+        <h2 class="mt-4 text-3xl font-bold tracking-tight text-white md:text-4xl">
+          One domain, one public identity, one flagship assistant
+        </h2>
+        <p class="mt-6 text-lg leading-8 text-slate-300">
+          Use <span class="font-semibold text-white">zamai.dev</span> as the official public home of the ZamAI ecosystem. Let Zeerak be featured there as the flagship assistant while its actual codebase remains private.
+        </p>
+      </div>
+
+      <div class="mt-12 grid gap-6 lg:grid-cols-3">
+        <div class="rounded-3xl border border-slate-800 bg-slate-900 p-8">
+          <div class="text-sm text-slate-500">Public site</div>
+          <div class="mt-2 text-2xl font-bold text-white">zamai.dev</div>
+          <p class="mt-3 text-sm leading-7 text-slate-400">Brand, story, ecosystem, and public showcase.</p>
+        </div>
+        <div class="rounded-3xl border border-slate-800 bg-slate-900 p-8">
+          <div class="text-sm text-slate-500">Flagship product</div>
+          <div class="mt-2 text-2xl font-bold text-white">Zeerak</div>
+          <p class="mt-3 text-sm leading-7 text-slate-400">Presented publicly without exposing implementation details.</p>
+        </div>
+        <div class="rounded-3xl border border-slate-800 bg-slate-900 p-8">
+          <div class="text-sm text-slate-500">Positioning line</div>
+          <div class="mt-2 text-2xl font-bold text-white">Zeerak by ZamAI</div>
+          <p class="mt-3 text-sm leading-7 text-slate-400">The strongest and clearest launch phrasing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section-reveal">
+    <div class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+      <div class="max-w-3xl">
+        <p class="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-300">Projects</p>
+        <h2 class="mt-4 text-3xl font-bold tracking-tight text-white md:text-4xl">
+          Public-facing work under the ZamAI umbrella
+        </h2>
+        <p class="mt-6 text-lg leading-8 text-slate-300">
+          Start by showcasing Zeerak, your public platform presence, and future tools or experiences you choose to share publicly.
+        </p>
+      </div>
+
+      <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <article class="rounded-3xl border border-blue-500/20 bg-slate-900 p-7 transition duration-300 hover:-translate-y-1 hover:border-blue-500/40">
+          <div class="inline-flex rounded-full border border-blue-500/20 bg-blue-500/10 px-3 py-1 text-xs font-medium text-blue-200">Flagship</div>
+          <h3 class="mt-5 text-2xl font-semibold text-white">Zeerak</h3>
+          <p class="mt-4 text-sm leading-7 text-slate-400">The main assistant experience and the first major product introduced by ZamAI.</p>
+          <a href="#contact" class="mt-6 inline-flex text-sm font-semibold text-cyan-300 hover:text-cyan-200">Learn more →</a>
+        </article>
+
+        <article class="rounded-3xl border border-slate-800 bg-slate-900 p-7 transition duration-300 hover:-translate-y-1 hover:border-cyan-500/40">
+          <div class="inline-flex rounded-full border border-slate-700 bg-slate-800 px-3 py-1 text-xs font-medium text-slate-300">Platform</div>
+          <h3 class="mt-5 text-2xl font-semibold text-white">ZamAI Web</h3>
+          <p class="mt-4 text-sm leading-7 text-slate-400">The public web presence and ecosystem hub for ZamAI products and future releases.</p>
+          <a href="https://github.com/ZamAI/zamai.github.io" target="_blank" rel="noreferrer" class="mt-6 inline-flex text-sm font-semibold text-cyan-300 hover:text-cyan-200">View website repo →</a>
+        </article>
+
+        <article class="rounded-3xl border border-slate-800 bg-slate-900 p-7 transition duration-300 hover:-translate-y-1 hover:border-violet-500/40">
+          <div class="inline-flex rounded-full border border-slate-700 bg-slate-800 px-3 py-1 text-xs font-medium text-slate-300">Upcoming</div>
+          <h3 class="mt-5 text-2xl font-semibold text-white">Future Products</h3>
+          <p class="mt-4 text-sm leading-7 text-slate-400">Space for future assistants, tools, docs, and ecosystem projects under ZamAI.</p>
+          <a href="#contact" class="mt-6 inline-flex text-sm font-semibold text-cyan-300 hover:text-cyan-200">Coming soon →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="section-reveal border-y border-slate-800 bg-slate-950/60">
+    <div class="mx-auto max-w-5xl px-6 py-20 lg:px-8">
+      <div class="max-w-3xl">
+        <p class="text-sm font-semibold uppercase tracking-[0.25em] text-blue-300">FAQ</p>
+        <h2 class="mt-4 text-3xl font-bold tracking-tight text-white md:text-4xl">
+          How is Zeerak introduced publicly?
+        </h2>
+      </div>
+
+      <div class="mt-10 space-y-4">
+        <details class="faq-item rounded-3xl border border-slate-800 bg-slate-900 p-6" open>
+          <summary class="cursor-pointer list-none text-lg font-semibold text-white">Is Zeerak public?</summary>
+          <p class="mt-4 text-sm leading-7 text-slate-400">Zeerak is introduced publicly as the flagship assistant by ZamAI, while its core implementation can remain private.</p>
+        </details>
+
+        <details class="faq-item rounded-3xl border border-slate-800 bg-slate-900 p-6">
+          <summary class="cursor-pointer list-none text-lg font-semibold text-white">What is the best one-line introduction?</summary>
+          <p class="mt-4 text-sm leading-7 text-slate-400">Use: <span class="font-semibold text-white">Zeerak is the flagship AI assistant by ZamAI.</span></p>
+        </details>
+
+        <details class="faq-item rounded-3xl border border-slate-800 bg-slate-900 p-6">
+          <summary class="cursor-pointer list-none text-lg font-semibold text-white">What stays public?</summary>
+          <p class="mt-4 text-sm leading-7 text-slate-400">The ZamAI website, public brand, docs, and any repos or showcase work you choose to share publicly.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section-reveal">
+    <div class="mx-auto max-w-5xl px-6 py-20 text-center lg:px-8">
+      <p class="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-300">Launch direction</p>
+      <h2 class="mt-4 text-4xl font-black tracking-tight text-white md:text-5xl">
+        Publicly launch <span class="gradient-text">ZamAI</span>.
+        Feature <span class="gradient-text">Zeerak</span>.
+        Keep the private core private.
+      </h2>
+      <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+        This gives you a clean, professional setup: one public ecosystem, one flagship product story, and full control over what remains private.
+      </p>
+
+      <div class="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
+        <a href="https://github.com/ZamAI" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center rounded-full bg-brand-gradient px-7 py-3.5 text-sm font-semibold text-slate-950 shadow-button transition duration-300 hover:scale-[1.02]">
+          Visit ZamAI on GitHub
+        </a>
+        <a href="mailto:hello@zamai.dev" class="inline-flex items-center justify-center rounded-full border border-slate-700 px-7 py-3.5 text-sm font-semibold text-white transition hover:border-slate-500 hover:bg-slate-900">
+          Contact ZamAI
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-slate-800 bg-[#02050b]">
+    <div class="mx-auto flex max-w-7xl flex-col gap-6 px-6 py-8 text-sm text-slate-500 md:flex-row md:items-center md:justify-between lg:px-8">
+      <div>© 2026 ZamAI. Home of Zeerak.</div>
+      <div class="flex flex-wrap items-center gap-5">
+        <a href="#home" class="transition hover:text-white">Home</a>
+        <a href="#zeerak" class="transition hover:text-white">Zeerak</a>
+        <a href="#about" class="transition hover:text-white">About</a>
+        <a href="#projects" class="transition hover:text-white">Projects</a>
+        <a href="https://github.com/ZamAI" target="_blank" rel="noreferrer" class="transition hover:text-white">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const body = document.body;
+    const header = document.getElementById("site-header");
+    const mobileMenuButton = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const openIcon = document.getElementById("menu-open-icon");
+    const closeIcon = document.getElementById("menu-close-icon");
+    const mobileLinks = mobileMenu.querySelectorAll("a");
+    const faqItems = document.querySelectorAll(".faq-item");
+    const revealEls = document.querySelectorAll(".section-reveal");
+
+    function setHeaderState() {
+      if (window.scrollY > 12) header.classList.add("backdrop-blur");
+      else header.classList.remove("backdrop-blur");
+    }
+
+    function openMenu() {
+      mobileMenu.classList.remove("hidden");
+      openIcon.classList.add("hidden");
+      closeIcon.classList.remove("hidden");
+      mobileMenuButton.setAttribute("aria-expanded", "true");
+      body.classList.add("mobile-open");
+    }
+
+    function closeMenu() {
+      mobileMenu.classList.add("hidden");
+      openIcon.classList.remove("hidden");
+      closeIcon.classList.add("hidden");
+      mobileMenuButton.setAttribute("aria-expanded", "false");
+      body.classList.remove("mobile-open");
+    }
+
+    mobileMenuButton.addEventListener("click", () => {
+      const isHidden = mobileMenu.classList.contains("hidden");
+      if (isHidden) openMenu();
+      else closeMenu();
+    });
+
+    mobileLinks.forEach((link) => link.addEventListener("click", closeMenu));
+
+    faqItems.forEach((item) => {
+      item.addEventListener("toggle", () => {
+        if (item.open) {
+          faqItems.forEach((other) => {
+            if (other !== item) other.removeAttribute("open");
+          });
+        }
+      });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add("visible");
+      });
+    }, { threshold: 0.12 });
+
+    revealEls.forEach((el) => observer.observe(el));
+
+    window.addEventListener("scroll", setHeaderState);
+    window.addEventListener("resize", () => {
+      if (window.innerWidth >= 768) closeMenu();
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeMenu();
+    });
+
+    setHeaderState();
+  </script>
+</body>
+</html>
