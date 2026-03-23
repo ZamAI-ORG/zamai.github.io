@@ -21,7 +21,7 @@ This repository is intended for:
 - public-facing product messaging
 - future docs, showcase pages, and ecosystem pages
 
-This repository does **not** contain Zeerak's private core implementation.
+This repository does **not** contain Zeerak’s private core implementation.
 
 ## Tech Stack
 - HTML
@@ -42,10 +42,10 @@ The site is deployed via **GitHub Pages** from the root of the default branch.
 ├── index.html
 ├── CNAME
 ├── README.md
-└── assets/
-    ├── favicon.svg
-    ├── logo.svg
-    └── og-image.svg
+├── assets/
+│   ├── favicon.svg
+│   ├── logo.svg
+│   └── og-image.png
 ```
 
 ## Notes
