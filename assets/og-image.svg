@@ -1,104 +1,85 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
-      <stop offset="0%"   stop-color="#020617"/>
-      <stop offset="100%" stop-color="#07101f"/>
+    <linearGradient id="bgGlow" x1="180" y1="80" x2="1000" y2="560" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1D4ED8" stop-opacity="0.35"/>
+      <stop offset="0.5" stop-color="#2563EB" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#0F172A" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="glow-blue" x1="0" y1="0" x2="400" y2="400" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.22"/>
-      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+    <linearGradient id="titleGradient" x1="0" y1="0" x2="400" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="0.45" stop-color="#93C5FD"/>
+      <stop offset="1" stop-color="#C4B5FD"/>
     </linearGradient>
-    <linearGradient id="glow-violet" x1="800" y1="0" x2="1200" y2="400" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.18"/>
-      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="icon-grad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%"   stop-color="#3b82f6"/>
-      <stop offset="45%"  stop-color="#22d3ee"/>
-      <stop offset="100%" stop-color="#8b5cf6"/>
-    </linearGradient>
-    <linearGradient id="title-grad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%"   stop-color="#ffffff"/>
-      <stop offset="35%"  stop-color="#93c5fd"/>
-      <stop offset="70%"  stop-color="#67e8f9"/>
-      <stop offset="100%" stop-color="#c4b5fd"/>
-    </linearGradient>
-    <!-- Grid pattern -->
-    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse">
-      <path d="M 34 0 L 0 0 0 34" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
-    </pattern>
   </defs>
 
-  <!-- Background -->
-  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="#020617"/>
+  <rect width="1200" height="630" fill="url(#bgGlow)"/>
 
-  <!-- Grid overlay -->
-  <rect width="1200" height="630" fill="url(#grid)" opacity="0.5"/>
+  <g opacity="0.08" stroke="#E2E8F0">
+    <path d="M0 80H1200"/>
+    <path d="M0 160H1200"/>
+    <path d="M0 240H1200"/>
+    <path d="M0 320H1200"/>
+    <path d="M0 400H1200"/>
+    <path d="M0 480H1200"/>
+    <path d="M0 560H1200"/>
+    <path d="M120 0V630"/>
+    <path d="M240 0V630"/>
+    <path d="M360 0V630"/>
+    <path d="M480 0V630"/>
+    <path d="M600 0V630"/>
+    <path d="M720 0V630"/>
+    <path d="M840 0V630"/>
+    <path d="M960 0V630"/>
+    <path d="M1080 0V630"/>
+  </g>
 
-  <!-- Ambient glows -->
-  <ellipse cx="200" cy="180" rx="380" ry="300" fill="url(#glow-blue)"/>
-  <ellipse cx="1050" cy="150" rx="320" ry="260" fill="url(#glow-violet)"/>
+  <g transform="translate(760 120) scale(0.55)">
+    <rect width="512" height="512" rx="120" fill="#020617"/>
+    <polygon points="256,80 332,124 332,212 256,256 180,212 180,124" fill="#2563EB"/>
+    <polygon points="136,150 212,194 212,282 136,326 60,282 60,194" fill="#1D4ED8"/>
+    <polygon points="376,150 452,194 452,282 376,326 300,282 300,194" fill="#1D4ED8"/>
+    <polygon points="136,308 212,352 212,440 136,484 60,440 60,352" fill="#1D4ED8"/>
+    <polygon points="376,308 452,352 452,440 376,484 300,440 300,352" fill="#1D4ED8"/>
+    <polygon points="256,256 332,300 332,388 256,432 180,388 180,300" fill="#2563EB"/>
 
-  <!-- Icon mark -->
-  <rect x="80" y="220" width="80" height="80" rx="20" fill="url(#icon-grad)"/>
-  <text
-    x="120" y="281"
-    font-family="'Inter', system-ui, sans-serif"
-    font-size="52"
-    font-weight="900"
-    text-anchor="middle"
-    fill="#020617"
-  >Z</text>
+    <g stroke="#E2E8F0" stroke-width="10" stroke-linecap="round">
+      <line x1="256" y1="256" x2="256" y2="120"/>
+      <line x1="256" y1="256" x2="256" y2="392"/>
+      <line x1="256" y1="256" x2="118" y2="238"/>
+      <line x1="256" y1="256" x2="394" y2="238"/>
+      <line x1="256" y1="256" x2="150" y2="176"/>
+      <line x1="256" y1="256" x2="362" y2="176"/>
+      <line x1="256" y1="256" x2="150" y2="336"/>
+      <line x1="256" y1="256" x2="362" y2="336"/>
+    </g>
 
-  <!-- ZamAI wordmark -->
-  <text
-    x="180" y="282"
-    font-family="'Inter', system-ui, sans-serif"
-    font-size="56"
-    font-weight="800"
-    fill="white"
-    letter-spacing="-1"
-  >ZamAI</text>
+    <g fill="#F8FAFC">
+      <circle cx="256" cy="120" r="14"/>
+      <circle cx="256" cy="392" r="14"/>
+      <circle cx="118" cy="238" r="14"/>
+      <circle cx="394" cy="238" r="14"/>
+      <circle cx="150" cy="176" r="14"/>
+      <circle cx="362" cy="176" r="14"/>
+      <circle cx="150" cy="336" r="14"/>
+      <circle cx="362" cy="336" r="14"/>
+      <circle cx="256" cy="256" r="16"/>
+    </g>
+  </g>
 
-  <!-- Divider -->
-  <line x1="80" y1="340" x2="560" y2="340" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <text x="90" y="205" fill="url(#titleGradient)" font-family="Inter, Arial, sans-serif" font-size="82" font-weight="800">
+    ZamAI
+  </text>
 
-  <!-- Tagline -->
-  <text
-    x="80" y="390"
-    font-family="'Inter', system-ui, sans-serif"
-    font-size="28"
-    font-weight="500"
-    fill="#94a3b8"
-    letter-spacing="0.2"
-  >Home of Zeerak</text>
+  <text x="90" y="280" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="600">
+    Home of Zeerak
+  </text>
 
-  <!-- Hero statement -->
-  <text
-    x="80" y="475"
-    font-family="'Inter', system-ui, sans-serif"
-    font-size="44"
-    font-weight="900"
-    fill="white"
-    letter-spacing="-0.5"
-  >Zeerak is the flagship AI assistant</text>
-  <text
-    x="80" y="530"
-    font-family="'Inter', system-ui, sans-serif"
-    font-size="44"
-    font-weight="900"
-    fill="url(#title-grad)"
-    letter-spacing="-0.5"
-  >by ZamAI.</text>
+  <text x="90" y="355" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="500">
+    The flagship AI assistant by ZamAI
+  </text>
 
-  <!-- Domain badge -->
-  <rect x="940" y="560" width="180" height="40" rx="20" fill="rgba(59,130,246,0.12)" stroke="rgba(59,130,246,0.25)" stroke-width="1"/>
-  <text
-    x="1030" y="585"
-    font-family="'Inter', system-ui, sans-serif"
-    font-size="16"
-    font-weight="600"
-    text-anchor="middle"
-    fill="#93c5fd"
-  >zamai.dev</text>
+  <text x="90" y="405" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="500">
+    AI products, tools, and digital experiences
+  </text>
 </svg>
