@@ -1,12 +1,51 @@
-<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="zamaiGradient" x1="32" y1="32" x2="224" y2="224" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#3B82F6"/>
-      <stop offset="0.5" stop-color="#22D3EE"/>
-      <stop offset="1" stop-color="#8B5CF6"/>
+    <linearGradient id="zamaiBlue" x1="96" y1="96" x2="416" y2="416" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#60A5FA"/>
+      <stop offset="0.5" stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="zamaiLine" x1="128" y1="128" x2="384" y2="384" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FAFC"/>
+      <stop offset="1" stop-color="#CBD5E1"/>
     </linearGradient>
   </defs>
-  <rect x="24" y="24" width="208" height="208" rx="56" fill="#020617"/>
-  <rect x="28" y="28" width="200" height="200" rx="52" stroke="url(#zamaiGradient)" stroke-width="8"/>
-  <path d="M80 78H176V94L108 162H176V178H80V162L148 94H80V78Z" fill="url(#zamaiGradient)"/>
+
+  <rect width="512" height="512" rx="120" fill="#020617"/>
+
+  <!-- outer hex cluster -->
+  <polygon points="256,80 332,124 332,212 256,256 180,212 180,124" fill="url(#zamaiBlue)" opacity="0.95"/>
+  <polygon points="136,150 212,194 212,282 136,326 60,282 60,194" fill="url(#zamaiBlue)" opacity="0.9"/>
+  <polygon points="376,150 452,194 452,282 376,326 300,282 300,194" fill="url(#zamaiBlue)" opacity="0.9"/>
+  <polygon points="136,308 212,352 212,440 136,484 60,440 60,352" fill="url(#zamaiBlue)" opacity="0.9"/>
+  <polygon points="376,308 452,352 452,440 376,484 300,440 300,352" fill="url(#zamaiBlue)" opacity="0.9"/>
+  <polygon points="256,256 332,300 332,388 256,432 180,388 180,300" fill="url(#zamaiBlue)" opacity="0.95"/>
+
+  <!-- center star -->
+  <path d="M256 208L272 240L304 256L272 272L256 304L240 272L208 256L240 240L256 208Z" fill="url(#zamaiLine)"/>
+
+  <!-- network lines -->
+  <g stroke="url(#zamaiLine)" stroke-width="10" stroke-linecap="round">
+    <line x1="256" y1="256" x2="256" y2="120"/>
+    <line x1="256" y1="256" x2="256" y2="392"/>
+    <line x1="256" y1="256" x2="118" y2="238"/>
+    <line x1="256" y1="256" x2="394" y2="238"/>
+    <line x1="256" y1="256" x2="150" y2="176"/>
+    <line x1="256" y1="256" x2="362" y2="176"/>
+    <line x1="256" y1="256" x2="150" y2="336"/>
+    <line x1="256" y1="256" x2="362" y2="336"/>
+  </g>
+
+  <!-- nodes -->
+  <g fill="#F8FAFC">
+    <circle cx="256" cy="120" r="14"/>
+    <circle cx="256" cy="392" r="14"/>
+    <circle cx="118" cy="238" r="14"/>
+    <circle cx="394" cy="238" r="14"/>
+    <circle cx="150" cy="176" r="14"/>
+    <circle cx="362" cy="176" r="14"/>
+    <circle cx="150" cy="336" r="14"/>
+    <circle cx="362" cy="336" r="14"/>
+    <circle cx="256" cy="256" r="16"/>
+  </g>
 </svg>
