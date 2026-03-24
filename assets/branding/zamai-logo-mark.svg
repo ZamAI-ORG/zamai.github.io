@@ -11,7 +11,7 @@
   </defs>
 
   <!-- Background -->
-  <rect width="512" height="512" rx="120" fill="url(#markBg)"/>
+  <rect width="512" height="512" rx="96" fill="url(#markBg)"/>
 
   <!-- Subtle center glow -->
   <circle cx="256" cy="256" r="160" fill="url(#centerGlow)"/>
