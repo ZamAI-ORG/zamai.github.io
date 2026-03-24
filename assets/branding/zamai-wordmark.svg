@@ -1,0 +1,18 @@
+<svg width="280" height="80" viewBox="0 0 280 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <text
+    x="0" y="58"
+    font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    font-size="64"
+    font-weight="800"
+    letter-spacing="-2"
+    fill="#1447B8"
+  >Zam</text>
+  <text
+    x="183" y="58"
+    font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    font-size="64"
+    font-weight="800"
+    letter-spacing="-2"
+    fill="#8A8F98"
+  >AI</text>
+</svg>

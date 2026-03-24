@@ -1,21 +1,21 @@
 <svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bgGlow" x1="180" y1="80" x2="1000" y2="560" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#1D4ED8" stop-opacity="0.35"/>
-      <stop offset="0.5" stop-color="#2563EB" stop-opacity="0.18"/>
-      <stop offset="1" stop-color="#0F172A" stop-opacity="0"/>
+      <stop stop-color="#1447B8" stop-opacity="0.30"/>
+      <stop offset="0.5" stop-color="#3B82F6" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#0D2F8F" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="titleGradient" x1="0" y1="0" x2="400" y2="0" gradientUnits="userSpaceOnUse">
+    <linearGradient id="titleGradient" x1="0" y1="0" x2="460" y2="0" gradientUnits="userSpaceOnUse">
       <stop stop-color="#FFFFFF"/>
       <stop offset="0.45" stop-color="#93C5FD"/>
-      <stop offset="1" stop-color="#C4B5FD"/>
+      <stop offset="1" stop-color="#3B82F6"/>
     </linearGradient>
   </defs>
 
-  <rect width="1200" height="630" fill="#020617"/>
+  <rect width="1200" height="630" fill="#0B1020"/>
   <rect width="1200" height="630" fill="url(#bgGlow)"/>
 
-  <g opacity="0.08" stroke="#E2E8F0">
+  <g opacity="0.07" stroke="#E2E8F0">
     <path d="M0 80H1200"/>
     <path d="M0 160H1200"/>
     <path d="M0 240H1200"/>
@@ -34,52 +34,76 @@
     <path d="M1080 0V630"/>
   </g>
 
-  <g transform="translate(760 120) scale(0.55)">
-    <rect width="512" height="512" rx="120" fill="#020617"/>
-    <polygon points="256,80 332,124 332,212 256,256 180,212 180,124" fill="#2563EB"/>
-    <polygon points="136,150 212,194 212,282 136,326 60,282 60,194" fill="#1D4ED8"/>
-    <polygon points="376,150 452,194 452,282 376,326 300,282 300,194" fill="#1D4ED8"/>
-    <polygon points="136,308 212,352 212,440 136,484 60,440 60,352" fill="#1D4ED8"/>
-    <polygon points="376,308 452,352 452,440 376,484 300,440 300,352" fill="#1D4ED8"/>
-    <polygon points="256,256 332,300 332,388 256,432 180,388 180,300" fill="#2563EB"/>
-
-    <g stroke="#E2E8F0" stroke-width="10" stroke-linecap="round">
-      <line x1="256" y1="256" x2="256" y2="120"/>
-      <line x1="256" y1="256" x2="256" y2="392"/>
-      <line x1="256" y1="256" x2="118" y2="238"/>
-      <line x1="256" y1="256" x2="394" y2="238"/>
-      <line x1="256" y1="256" x2="150" y2="176"/>
-      <line x1="256" y1="256" x2="362" y2="176"/>
-      <line x1="256" y1="256" x2="150" y2="336"/>
-      <line x1="256" y1="256" x2="362" y2="336"/>
-    </g>
-
-    <g fill="#F8FAFC">
-      <circle cx="256" cy="120" r="14"/>
-      <circle cx="256" cy="392" r="14"/>
-      <circle cx="118" cy="238" r="14"/>
-      <circle cx="394" cy="238" r="14"/>
-      <circle cx="150" cy="176" r="14"/>
-      <circle cx="362" cy="176" r="14"/>
-      <circle cx="150" cy="336" r="14"/>
-      <circle cx="362" cy="336" r="14"/>
-      <circle cx="256" cy="256" r="16"/>
+  <!-- Snowflake logo mark (brand logo) at top right -->
+  <g transform="translate(810,75) scale(0.55)">
+    <rect width="512" height="512" rx="120" fill="#0B1020"/>
+    <g transform="translate(256,256)">
+      <line x1="0" y1="-22" x2="0" y2="-112" stroke="#1447B8" stroke-width="11" stroke-linecap="round"/>
+      <line x1="0" y1="-68" x2="-27" y2="-83" stroke="#3B82F6" stroke-width="7" stroke-linecap="round"/>
+      <line x1="0" y1="-68" x2="27" y2="-83" stroke="#3B82F6" stroke-width="7" stroke-linecap="round"/>
+      <circle cx="0" cy="-112" r="13" fill="#1447B8"/>
+      <circle cx="-27" cy="-83" r="8" fill="#3B82F6"/>
+      <circle cx="27" cy="-83" r="8" fill="#3B82F6"/>
+      <g transform="rotate(60)">
+        <line x1="0" y1="-22" x2="0" y2="-112" stroke="#1447B8" stroke-width="11" stroke-linecap="round"/>
+        <line x1="0" y1="-68" x2="-27" y2="-83" stroke="#3B82F6" stroke-width="7" stroke-linecap="round"/>
+        <line x1="0" y1="-68" x2="27" y2="-83" stroke="#3B82F6" stroke-width="7" stroke-linecap="round"/>
+        <circle cx="0" cy="-112" r="13" fill="#1447B8"/>
+        <circle cx="-27" cy="-83" r="8" fill="#3B82F6"/>
+        <circle cx="27" cy="-83" r="8" fill="#3B82F6"/>
+      </g>
+      <g transform="rotate(120)">
+        <line x1="0" y1="-22" x2="0" y2="-112" stroke="#1447B8" stroke-width="11" stroke-linecap="round"/>
+        <line x1="0" y1="-68" x2="-27" y2="-83" stroke="#3B82F6" stroke-width="7" stroke-linecap="round"/>
+        <line x1="0" y1="-68" x2="27" y2="-83" stroke="#3B82F6" stroke-width="7" stroke-linecap="round"/>
+        <circle cx="0" cy="-112" r="13" fill="#1447B8"/>
+        <circle cx="-27" cy="-83" r="8" fill="#3B82F6"/>
+        <circle cx="27" cy="-83" r="8" fill="#3B82F6"/>
+      </g>
+      <g transform="rotate(180)">
+        <line x1="0" y1="-22" x2="0" y2="-112" stroke="#1447B8" stroke-width="11" stroke-linecap="round"/>
+        <line x1="0" y1="-68" x2="-27" y2="-83" stroke="#3B82F6" stroke-width="7" stroke-linecap="round"/>
+        <line x1="0" y1="-68" x2="27" y2="-83" stroke="#3B82F6" stroke-width="7" stroke-linecap="round"/>
+        <circle cx="0" cy="-112" r="13" fill="#1447B8"/>
+        <circle cx="-27" cy="-83" r="8" fill="#3B82F6"/>
+        <circle cx="27" cy="-83" r="8" fill="#3B82F6"/>
+      </g>
+      <g transform="rotate(240)">
+        <line x1="0" y1="-22" x2="0" y2="-112" stroke="#1447B8" stroke-width="11" stroke-linecap="round"/>
+        <line x1="0" y1="-68" x2="-27" y2="-83" stroke="#3B82F6" stroke-width="7" stroke-linecap="round"/>
+        <line x1="0" y1="-68" x2="27" y2="-83" stroke="#3B82F6" stroke-width="7" stroke-linecap="round"/>
+        <circle cx="0" cy="-112" r="13" fill="#1447B8"/>
+        <circle cx="-27" cy="-83" r="8" fill="#3B82F6"/>
+        <circle cx="27" cy="-83" r="8" fill="#3B82F6"/>
+      </g>
+      <g transform="rotate(300)">
+        <line x1="0" y1="-22" x2="0" y2="-112" stroke="#1447B8" stroke-width="11" stroke-linecap="round"/>
+        <line x1="0" y1="-68" x2="-27" y2="-83" stroke="#3B82F6" stroke-width="7" stroke-linecap="round"/>
+        <line x1="0" y1="-68" x2="27" y2="-83" stroke="#3B82F6" stroke-width="7" stroke-linecap="round"/>
+        <circle cx="0" cy="-112" r="13" fill="#1447B8"/>
+        <circle cx="-27" cy="-83" r="8" fill="#3B82F6"/>
+        <circle cx="27" cy="-83" r="8" fill="#3B82F6"/>
+      </g>
+      <circle cx="0" cy="0" r="26" fill="#0D2F8F"/>
+      <circle cx="0" cy="0" r="18" fill="#1447B8"/>
+      <circle cx="0" cy="0" r="10" fill="#3B82F6"/>
     </g>
   </g>
 
-  <text x="90" y="205" fill="url(#titleGradient)" font-family="Inter, Arial, sans-serif" font-size="82" font-weight="800">
-    ZamAI
+  <!-- ZamAI wordmark: Zam = white-to-blue gradient, AI = cool gray -->
+  <text x="90" y="205" font-family="Inter, Arial, sans-serif" font-size="82" font-weight="800">
+    <tspan fill="url(#titleGradient)">Zam</tspan><tspan fill="#8A8F98">AI</tspan>
   </text>
 
   <text x="90" y="280" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="600">
     Home of Zeerak
   </text>
 
-  <text x="90" y="355" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="500">
+  <text x="90" y="355" fill="#8A8F98" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="500">
     The flagship AI assistant by ZamAI
   </text>
 
-  <text x="90" y="405" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="500">
+  <text x="90" y="405" fill="#8A8F98" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="500">
     AI products, tools, and digital experiences
   </text>
 </svg>

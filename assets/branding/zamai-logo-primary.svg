@@ -1,33 +1,13 @@
-<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="markBg" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0B1020"/>
-      <stop offset="1" stop-color="#0D1530"/>
-    </linearGradient>
-    <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#1447B8" stop-opacity="0"/>
-    </radialGradient>
-  </defs>
-
-  <!-- Background -->
-  <rect width="512" height="512" rx="120" fill="url(#markBg)"/>
-
-  <!-- Subtle center glow -->
-  <circle cx="256" cy="256" r="160" fill="url(#centerGlow)"/>
-
-  <!-- 6-arm snowflake / hexagonal circuit motif -->
-  <g transform="translate(256,256)">
-
-    <!-- Arm 0° (up) -->
+<svg width="360" height="80" viewBox="0 0 360 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Logo mark symbol (snowflake circuit, no background) at 80x80 -->
+  <g transform="translate(40,40) scale(0.1328125)">
+    <!-- Arms -->
     <line x1="0" y1="-22" x2="0" y2="-112" stroke="#1447B8" stroke-width="11" stroke-linecap="round"/>
     <line x1="0" y1="-68" x2="-27" y2="-83" stroke="#3B82F6" stroke-width="7" stroke-linecap="round"/>
     <line x1="0" y1="-68" x2="27" y2="-83" stroke="#3B82F6" stroke-width="7" stroke-linecap="round"/>
     <circle cx="0" cy="-112" r="13" fill="#1447B8"/>
     <circle cx="-27" cy="-83" r="8" fill="#3B82F6"/>
     <circle cx="27" cy="-83" r="8" fill="#3B82F6"/>
-
-    <!-- Arm 60° -->
     <g transform="rotate(60)">
       <line x1="0" y1="-22" x2="0" y2="-112" stroke="#1447B8" stroke-width="11" stroke-linecap="round"/>
       <line x1="0" y1="-68" x2="-27" y2="-83" stroke="#3B82F6" stroke-width="7" stroke-linecap="round"/>
@@ -36,8 +16,6 @@
       <circle cx="-27" cy="-83" r="8" fill="#3B82F6"/>
       <circle cx="27" cy="-83" r="8" fill="#3B82F6"/>
     </g>
-
-    <!-- Arm 120° -->
     <g transform="rotate(120)">
       <line x1="0" y1="-22" x2="0" y2="-112" stroke="#1447B8" stroke-width="11" stroke-linecap="round"/>
       <line x1="0" y1="-68" x2="-27" y2="-83" stroke="#3B82F6" stroke-width="7" stroke-linecap="round"/>
@@ -46,8 +24,6 @@
       <circle cx="-27" cy="-83" r="8" fill="#3B82F6"/>
       <circle cx="27" cy="-83" r="8" fill="#3B82F6"/>
     </g>
-
-    <!-- Arm 180° -->
     <g transform="rotate(180)">
       <line x1="0" y1="-22" x2="0" y2="-112" stroke="#1447B8" stroke-width="11" stroke-linecap="round"/>
       <line x1="0" y1="-68" x2="-27" y2="-83" stroke="#3B82F6" stroke-width="7" stroke-linecap="round"/>
@@ -56,8 +32,6 @@
       <circle cx="-27" cy="-83" r="8" fill="#3B82F6"/>
       <circle cx="27" cy="-83" r="8" fill="#3B82F6"/>
     </g>
-
-    <!-- Arm 240° -->
     <g transform="rotate(240)">
       <line x1="0" y1="-22" x2="0" y2="-112" stroke="#1447B8" stroke-width="11" stroke-linecap="round"/>
       <line x1="0" y1="-68" x2="-27" y2="-83" stroke="#3B82F6" stroke-width="7" stroke-linecap="round"/>
@@ -66,8 +40,6 @@
       <circle cx="-27" cy="-83" r="8" fill="#3B82F6"/>
       <circle cx="27" cy="-83" r="8" fill="#3B82F6"/>
     </g>
-
-    <!-- Arm 300° -->
     <g transform="rotate(300)">
       <line x1="0" y1="-22" x2="0" y2="-112" stroke="#1447B8" stroke-width="11" stroke-linecap="round"/>
       <line x1="0" y1="-68" x2="-27" y2="-83" stroke="#3B82F6" stroke-width="7" stroke-linecap="round"/>
@@ -76,10 +48,27 @@
       <circle cx="-27" cy="-83" r="8" fill="#3B82F6"/>
       <circle cx="27" cy="-83" r="8" fill="#3B82F6"/>
     </g>
-
-    <!-- Center hub (layered rings) -->
+    <!-- Center hub -->
     <circle cx="0" cy="0" r="26" fill="#0D2F8F"/>
     <circle cx="0" cy="0" r="18" fill="#1447B8"/>
     <circle cx="0" cy="0" r="10" fill="#3B82F6"/>
   </g>
+
+  <!-- Wordmark: Zam in primary blue, AI in cool gray -->
+  <text
+    x="92" y="55"
+    font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    font-size="44"
+    font-weight="800"
+    letter-spacing="-1.5"
+    fill="#1447B8"
+  >Zam</text>
+  <text
+    x="218" y="55"
+    font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    font-size="44"
+    font-weight="800"
+    letter-spacing="-1.5"
+    fill="#8A8F98"
+  >AI</text>
 </svg>

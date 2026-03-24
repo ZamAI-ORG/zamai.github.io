@@ -8,7 +8,7 @@
     name="description"
     content="ZamAI is the home of Zeerak, the flagship AI assistant by ZamAI, along with future AI products, tools, and digital experiences."
   />
-  <meta name="theme-color" content="#020617" />
+  <meta name="theme-color" content="#0B1020" />
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="/assets/favicon.svg" />
   <!-- Open Graph -->
@@ -41,24 +41,26 @@
           },
           colors: {
             zamai: {
-              bg: "#020617",
-              bgSoft: "#07101f",
+              bg: "#0B1020",
+              bgSoft: "#0D1530",
               panel: "#0b1220",
               panelAlt: "#0f172a",
               line: "#1e293b",
               text: "#f8fafc",
-              muted: "#94a3b8",
-              blue: "#3b82f6",
+              muted: "#8A8F98",
+              blue: "#1447B8",
+              deepBlue: "#0D2F8F",
+              blueAccent: "#3B82F6",
               cyan: "#22d3ee",
               violet: "#8b5cf6"
             }
           },
           boxShadow: {
-            glow: "0 0 0 1px rgba(59,130,246,0.18), 0 12px 50px rgba(34,211,238,0.12)",
-            button: "0 10px 30px rgba(59,130,246,0.25)"
+            glow: "0 0 0 1px rgba(20,71,184,0.25), 0 12px 50px rgba(59,130,246,0.14)",
+            button: "0 10px 30px rgba(20,71,184,0.35)"
           },
           backgroundImage: {
-            "brand-gradient": "linear-gradient(135deg, #3b82f6 0%, #22d3ee 45%, #8b5cf6 100%)"
+            "brand-gradient": "linear-gradient(135deg, #1447B8 0%, #3B82F6 50%, #0D2F8F 100%)"
           }
         }
       }
@@ -70,10 +72,10 @@
 
     body {
       background:
-        radial-gradient(circle at top left, rgba(59, 130, 246, 0.12), transparent 26%),
-        radial-gradient(circle at top right, rgba(139, 92, 246, 0.10), transparent 22%),
-        radial-gradient(circle at 50% 20%, rgba(34, 211, 238, 0.08), transparent 25%),
-        #020617;
+        radial-gradient(circle at top left, rgba(59, 130, 246, 0.10), transparent 26%),
+        radial-gradient(circle at top right, rgba(13, 47, 143, 0.12), transparent 22%),
+        radial-gradient(circle at 50% 20%, rgba(20, 71, 184, 0.08), transparent 25%),
+        #0B1020;
       color: #f8fafc;
     }
 
@@ -87,13 +89,13 @@
     }
 
     .glass {
-      background: rgba(11, 18, 32, 0.72);
+      background: rgba(11, 16, 32, 0.78);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
     }
 
     .gradient-text {
-      background: linear-gradient(90deg, #ffffff 0%, #93c5fd 30%, #67e8f9 65%, #c4b5fd 100%);
+      background: linear-gradient(90deg, #ffffff 0%, #93c5fd 35%, #3B82F6 70%, #1447B8 100%);
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -110,7 +112,7 @@
       inset: 0;
       border-radius: 1.5rem;
       padding: 1px;
-      background: linear-gradient(135deg, rgba(59,130,246,0.45), rgba(34,211,238,0.22), rgba(139,92,246,0.35));
+      background: linear-gradient(135deg, rgba(20,71,184,0.55), rgba(59,130,246,0.28), rgba(13,47,143,0.40));
       -webkit-mask:
         linear-gradient(#fff 0 0) content-box,
         linear-gradient(#fff 0 0);
@@ -139,21 +141,23 @@
 <body class="font-sans antialiased selection:bg-cyan-400/20 selection:text-white">
   <div class="relative overflow-hidden">
     <div class="grid-overlay absolute inset-0 opacity-50"></div>
-    <div class="absolute inset-x-0 top-0 h-[42rem] bg-gradient-to-b from-blue-500/10 via-cyan-400/5 to-transparent"></div>
+    <div class="absolute inset-x-0 top-0 h-[42rem] bg-gradient-to-b from-zamai-blue/10 via-zamai-blueAccent/5 to-transparent"></div>
 
     <header id="site-header" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
       <nav class="mx-auto mt-3 max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="glass flex items-center justify-between rounded-2xl border border-slate-800 px-4 py-3 shadow-lg">
           <a href="#home" class="group flex items-center gap-3">
             <img
-              src="/assets/favicon.svg"
-              alt="ZamAI icon"
+              src="/assets/branding/zamai-logo-mark.svg"
+              alt="ZamAI logo mark"
               class="h-11 w-11 rounded-2xl shadow-button transition duration-300 group-hover:scale-105"
               width="44"
               height="44"
             />
             <div>
-              <div class="text-lg font-bold tracking-tight text-white">ZamAI</div>
+              <div class="text-lg font-bold tracking-tight">
+                <span class="text-zamai-blueAccent">Zam</span><span class="text-zamai-muted">AI</span>
+              </div>
               <div class="text-xs text-slate-400">Home of Zeerak</div>
             </div>
           </a>
@@ -283,10 +287,10 @@
           </div>
 
           <div class="section-reveal relative">
-            <div class="absolute -inset-8 rounded-[2rem] bg-gradient-to-r from-blue-500/20 via-cyan-400/10 to-violet-500/20 blur-3xl"></div>
+            <div class="absolute -inset-8 rounded-[2rem] bg-gradient-to-r from-zamai-blue/20 via-zamai-blueAccent/10 to-zamai-deepBlue/20 blur-3xl"></div>
 
             <div class="border-glow glass relative rounded-[1.5rem] p-4 shadow-glow">
-              <div class="rounded-[1.3rem] border border-slate-800 bg-[#040b16] p-4">
+              <div class="rounded-[1.3rem] border border-slate-800 bg-[#070e1d] p-4">
                 <div class="mb-4 flex items-center justify-between border-b border-slate-800 pb-4">
                   <div class="flex items-center gap-2">
                     <span class="h-3 w-3 rounded-full bg-red-500"></span>
@@ -298,7 +302,7 @@
 
                 <div class="space-y-4">
                   <div class="rounded-2xl border border-slate-800 bg-slate-950/90 p-4">
-                    <div class="mb-2 text-xs uppercase tracking-[0.22em] text-cyan-300">ZamAI System</div>
+                    <div class="mb-2 text-xs uppercase tracking-[0.22em] text-zamai-blueAccent">ZamAI System</div>
                     <p class="text-sm leading-7 text-slate-300">
                       Initializing Zeerak... flagship assistant online... ecosystem routing active...
                     </p>
@@ -321,8 +325,8 @@
                     </div>
                   </div>
 
-                  <div class="rounded-2xl border border-cyan-400/15 bg-cyan-400/5 p-4">
-                    <div class="text-xs uppercase tracking-[0.2em] text-cyan-300">Positioning</div>
+                  <div class="rounded-2xl border border-zamai-blue/20 bg-zamai-blue/5 p-4">
+                    <div class="text-xs uppercase tracking-[0.2em] text-zamai-blueAccent">Positioning</div>
                     <div class="mt-2 text-lg font-semibold text-white">Zeerak by ZamAI</div>
                   </div>
                 </div>
@@ -614,7 +618,7 @@
     </div>
   </section>
 
-  <footer class="border-t border-slate-800 bg-[#02050b]">
+  <footer class="border-t border-slate-800 bg-[#080d1a]">
     <div class="mx-auto flex max-w-7xl flex-col gap-6 px-6 py-8 text-sm text-slate-500 md:flex-row md:items-center md:justify-between lg:px-8">
       <div>© 2026 ZamAI. Home of Zeerak.</div>
       <div class="flex flex-wrap items-center gap-5">

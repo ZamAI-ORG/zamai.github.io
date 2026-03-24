@@ -1,0 +1,83 @@
+ZamAI Branding Assets
+=====================
+
+Brand name:     ZamAI
+Flagship:       Zeerak by ZamAI
+
+
+COLOR PALETTE
+-------------
+Primary blue:       #1447B8
+Deep blue:          #0D2F8F
+Light blue accent:  #3B82F6
+White:              #FFFFFF
+Cool gray:          #8A8F98
+Dark background:    #0B1020
+
+
+LOGO SYSTEM
+-----------
+Primary logo:  symbol + ZamAI wordmark
+Logo mark:     symbol only (geometric snowflake / hexagonal circuit motif)
+Wordmark:      ZamAI text only (Zam = primary blue, AI = cool gray)
+App icon:      symbol only
+Favicon:       symbol only
+
+
+ASSET DIRECTORY STRUCTURE
+--------------------------
+assets/
+├── favicon.svg                        ← Browser tab / app icon (symbol only)
+├── logo.svg                           ← Primary full logo (512×512 square)
+├── og-image.svg                       ← Open Graph / social sharing image (1200×630)
+└── branding/
+    ├── zamai-logo-primary.svg         ← Symbol + wordmark (horizontal lockup)
+    ├── zamai-logo-mark.svg            ← Symbol only (512×512 square)
+    ├── zamai-wordmark.svg             ← ZamAI wordmark text only
+    └── zamai-logo-white.svg           ← White/monochrome version (horizontal lockup)
+
+
+RECOMMENDED USAGE
+-----------------
+zamai-logo-primary.svg  →  Website header / footer (light or neutral backgrounds)
+zamai-logo-white.svg    →  Dark hero sections, dark overlays
+zamai-logo-mark.svg     →  Favicon base, app icon, social avatar, tight spaces
+zamai-wordmark.svg      →  Tight horizontal spaces where symbol is shown separately
+og-image.svg            →  Open Graph / Twitter / social sharing image
+favicon.svg             →  Browser favicon (<link rel="icon">)
+
+
+WORDMARK RULES
+--------------
+• Must read exactly: ZamAI
+• Ensure "AI" is clearly distinguishable from "Al" (letter l)
+• Zam  = primary blue (#1447B8) on light backgrounds
+       = light blue accent (#3B82F6) on dark backgrounds for contrast
+• AI   = cool gray (#8A8F98) or white depending on background
+• Font: Inter 800 (Extra Bold), letter-spacing: tight
+
+
+SYMBOL DESCRIPTION
+------------------
+Geometric snowflake / hexagonal circuit motif
+• 6 arms radiating from a central hub at 60° intervals
+• Each arm has sub-branches at 60° angles (circuit-node style)
+• Circular nodes at arm tips and branch points
+• Layered center hub: deep blue → primary blue → light blue accent
+• Meaning: intelligence, symmetry, connectivity, precision, scalable systems
+
+
+USAGE RULES
+-----------
+• Keep clear space around logo equal to at least the outer arm span
+• Do not stretch, rotate, recolor randomly, or add heavy effects
+• Use symbol-only version for small spaces (< 32px display size)
+• Use white/monochrome version on complex or dark-colored backgrounds
+• Minimum size: 24×24px for the logo mark; 120px wide for the primary logo
+
+
+CLEAR SPACE
+-----------
+The minimum clear space around all logo variants equals the radius of the
+outermost node ring in the symbol. Do not place other design elements within
+this zone.
