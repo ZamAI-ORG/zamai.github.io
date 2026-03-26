@@ -1,6 +1,6 @@
-Perfect — here’s the **full set** for `ZamAI/zamai.github.io`.
+# Improvements for ZamAI/zamai.github.io
 
----
+Perfect — here’s the **full set** for `ZamAI/zamai.github.io`
 
 ## Better `README.md`
 
@@ -99,6 +99,7 @@ zamai.github.io/
 ```
 
 For now, keep it simple:
+
 - `index.html`
 - `CNAME`
 - `README.md`
@@ -111,6 +112,7 @@ For now, keep it simple:
 You need two lightweight brand assets first:
 
 ### 1. `logo.svg`
+
 This can be a clean ZamAI logo for future reuse.
 
 ```xml name=assets/logo.svg
@@ -129,6 +131,7 @@ This can be a clean ZamAI logo for future reuse.
 ```
 
 ### 2. `favicon.svg`
+
 Use a simplified Z mark.
 
 ```xml name=assets/favicon.svg
@@ -170,6 +173,7 @@ For now, your text-based nav is already good, so favicon matters more immediatel
 ## OG image plan
 
 You need an image for link previews on:
+
 - X / Twitter
 - LinkedIn
 - Discord
@@ -178,6 +182,7 @@ You need an image for link previews on:
 - GitHub social previews
 
 ### Recommended file
+
 Create:
 
 ```text
@@ -185,6 +190,7 @@ assets/og-image.png
 ```
 
 ### Recommended size
+
 Use:
 
 ```text
@@ -200,29 +206,37 @@ This is the safest standard for Open Graph.
 Use this layout:
 
 ### Background
+
 - dark premium background
 - subtle blue/cyan/violet glow
 - slight grid texture if possible
 
 ### Main text
+
 Big headline:
+
 - **ZamAI**
 
 Subheadline:
+
 - **Home of Zeerak**
 or
 - **Zeerak, the flagship AI assistant by ZamAI**
 
 ### Small supporting line
+
 - AI products, tools, and digital experiences
 
 ### Visual
+
 - a glowing `Z`
 - or your logo mark
 - or a premium mock terminal/chat card
 
 ### Colors
+
 Use your brand palette:
+
 - `#020617`
 - `#3B82F6`
 - `#22D3EE`
@@ -234,14 +248,17 @@ Use your brand palette:
 ## Suggested OG image copy
 
 ### Option 1
+
 **ZamAI**  
 *Home of Zeerak*
 
 ### Option 2
+
 **Zeerak by ZamAI**  
 *The flagship AI assistant*
 
 ### Option 3
+
 **ZamAI**  
 *AI products, tools, and intelligent experiences*
 
@@ -266,26 +283,33 @@ Your current page should include both `og:image` and `twitter:image`.
 Create these now:
 
 ### `README.md`
+
 Use the version above
 
 ### `assets/favicon.svg`
+
 Use the SVG above
 
 ### `assets/logo.svg`
+
 Use the SVG above
 
 ### `assets/og-image.png`
+
 Create later if you want, but plan for it now
 
 ---
 
 ## Best next step
+
 If you want, I can now give you a **fully updated `index.html` head section** with:
+
 - favicon
 - OG tags
 - Twitter tags
 - cleaner SEO meta tags
 
 Or I can generate:
+
 - a **simple SVG-based OG image as code**
 - or a **full polished repo starter pack** with all file contents together.
